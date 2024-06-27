@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Car Accessories</title>
+    <link rel = "stylesheet" href = "/css/global.css" />
+</head>
+ 
+<body>
+    <h1>Car Accessories</h1>
+ 
+    <form id="accessoryForm">
+        <label for="accessory">Select an accessory:</label>
+        <select id="accessory">
+            <option value="100">Car Cover</option>
+            <option value="200">Floor Mats</option>
+            <option value="40">Seat Covers</option>
+            <option value="50">Phone Holder</option>
+        </select>
+        <br>
+ 
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" min="1" value="1">
+        <br>
+ 
+        <button type="button" onclick="addToProductList()">Add</button>
+    </form>
+ 
+    <table >
+        <thead>
+            <tr>
+                <th>Accessory</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="productList">
+            <!-- Product list items will be added here dynamically -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Gross Price:</td>
+                <td id="grossPrice">0</td>
+            </tr>
+            <tr>
+                <td colspan="2">VAT Amount(7%):</td>
+                <td id="vatAmount">0</td>
+            </tr>
+            <tr>
+                <td colspan="2">Net Amount</td>
+                <td id="netAmount">0</td>
+            </tr>
+        </tfoot>
+    </table>
+ 
+    <script>
+        var grossPrice = 0;
+        var vatAmount = 0;
+        var netAmount = 0;
+        function addToProductList() {
+            var accessorySelect = document.getElementById("accessory");
+            var accessoryOption = accessorySelect.options[accessorySelect.selectedIndex];
+            var accessoryName = accessoryOption.text;
+            var accessoryPrice = accessoryOption.value;
+            var amountInput = document.getElementById("amount");
+            var amount = amountInput.value;
+ 
+            var productList = document.getElementById("productList");
+            var newRow = productList.insertRow(-1);
+            var accessoryCell = newRow.insertCell(0);
+            var amountCell = newRow.insertCell(1);
+            var priceCell = newRow.insertCell(2);
+ 
+            accessoryCell.innerHTML = accessoryName;
+            amountCell.innerHTML = amount;
+            priceCell.innerHTML = accessoryPrice * amount;
+ 
+            //update the total price
+            grossPrice += accessoryPrice * amount;
+            document.getElementById("grossPrice").innerHTML = grossPrice;
+            vatAmount = grossPrice * 0.07;
+            document.getElementById("vatAmount").innerHTML = vatAmount.toFixed(2);
+            netAmount = grossPrice + vatAmount;
+            document.getElementById("netAmount").innerHTML = netAmount.toFixed(2);
+        }
+ 
+    </script>
+</body>
+ 
+</html>
