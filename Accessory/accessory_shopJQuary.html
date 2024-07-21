@@ -33,10 +33,10 @@
                 <th>Accessory</th>
                 <th>Amount</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody id="productList">
-            <!-- Product list items will be added here dynamically -->
         </tbody>
         <tfoot>
             <tr>
@@ -48,7 +48,7 @@
                 <td id="vatAmount">0</td>
             </tr>
             <tr>
-                <td colspan="2">Net Amount</td>
+                <td colspan="2">Net Amount:</td>
                 <td id="netAmount">0</td>
             </tr>
         </tfoot>
@@ -76,6 +76,10 @@
             newRow.append($("<td>").text(accessoryName));
             newRow.append($("<td>").text(amount));
             newRow.append($("<td>").text((accessoryPrice * amount).toFixed(2)));
+            var deleteButton = $("<button>").text("Delete").click(function() {
+                removeFromProductList(newRow, accessoryPrice * amount);
+            });
+            newRow.append($("<td>").append(deleteButton));
 
             $("#productList").append(newRow);
 
@@ -83,7 +87,13 @@
             updatePrices();
         }
 
-        $(document).ready(function () {
+        function removeFromProductList(row, price) {
+            row.remove();
+            grossPrice -= price;
+            updatePrices();
+        }
+
+        $(document).ready(function() {
             $("#addButton").click(addToProductList);
         });
     </script>
