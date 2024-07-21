@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Accessories</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Car Accessories</h1>
+
+    <form id="accessoryForm">
+        <label for="accessory">Select an accessory:</label>
+        <select id="accessory">
+            <option value="100">Car Cover</option>
+            <option value="200">Floor Mats</option>
+            <option value="40">Seat Covers</option>
+            <option value="50">Phone Holder</option>
+        </select>
+        <br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" min="1" value="1">
+        <br>
+
+        <button type="button" id="addButton">Add</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Accessory</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="productList">
+            <!-- Product list items will be added here dynamically -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Gross Price:</td>
+                <td id="grossPrice">0</td>
+            </tr>
+            <tr>
+                <td colspan="2">VAT Amount(7%):</td>
+                <td id="vatAmount">0</td>
+            </tr>
+            <tr>
+                <td colspan="2">Net Amount</td>
+                <td id="netAmount">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        var grossPrice = 0;
+
+        function updatePrices() {
+            var vatAmount = grossPrice * 0.07;
+            var netAmount = grossPrice + vatAmount;
+            $("#grossPrice").text(grossPrice.toFixed(2));
+            $("#vatAmount").text(vatAmount.toFixed(2));
+            $("#netAmount").text(netAmount.toFixed(2));
+        }
+
+        function addToProductList() {
+            var accessorySelect = $("#accessory");
+            var accessoryOption = accessorySelect.find(":selected");
+            var accessoryName = accessoryOption.text();
+            var accessoryPrice = parseFloat(accessoryOption.val());
+            var amount = parseInt($("#amount").val());
+
+            var newRow = $("<tr>");
+            newRow.append($("<td>").text(accessoryName));
+            newRow.append($("<td>").text(amount));
+            newRow.append($("<td>").text((accessoryPrice * amount).toFixed(2)));
+
+            $("#productList").append(newRow);
+
+            grossPrice += accessoryPrice * amount;
+            updatePrices();
+        }
+
+        $(document).ready(function () {
+            $("#addButton").click(addToProductList);
+        });
+    </script>
+</body>
+
+</html>
