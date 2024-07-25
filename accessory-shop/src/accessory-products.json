@@ -1,8 +1,6 @@
-[
-    {"id" :1 , "name": "Door Visor" , "price": 100} ,
-    {"id" :2 , "name": "Car Cover" , "price": 200} ,
-    {"id" :3 , "name": "Seat Cover" , "price": 300} ,
-    {"id" :4 , "name": "Mud Guard" , "price": 400} ,
-    {"id" :5 , "name": "Car charger" , "price": 500} 
-
-]
+ [
+    {"id": 1,"name": "Car Cover","price": 49.99},
+    {"id": 2,"name": "Floor Mat","price": 39.99},
+    {"id": 3,"name": "Seat Cover","price": 79.99},
+    {"id": 4,"name": "Phone Holder","price": 24.99}
+  ]
