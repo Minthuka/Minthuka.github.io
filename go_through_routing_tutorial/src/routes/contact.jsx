@@ -26,7 +26,7 @@ export async function action({ request, params }) {
 // Action function to handle the deletion of a contact
 export async function destroyAction({ params }) {
     await deleteContact(params.contactId);
-    return redirect("/contacts"); // Redirect to the contacts list after deletion
+    return redirect("/routing-app/"); // Redirect to the contacts list after deletion
 }
 
 // Contact component
