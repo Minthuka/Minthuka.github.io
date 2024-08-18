@@ -5,7 +5,7 @@ export async function action({ request, params }) {
     const formData = await request.formData();
     const updates = Object.fromEntries(formData);
     await updateContact(params.contactId, updates);
-    return redirect(`/contacts/${params.contactId}`);
+    return redirect(`/routing-app/contacts/${params.contactId}`);
   }
   
 
