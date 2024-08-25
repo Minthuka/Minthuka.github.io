@@ -1,0 +1,197 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "brand": "Honda",
+        "model": "Accord",
+        "valueInBaht": 500000,
+        "numberOfCars": 20,
+        "highlighted": false
+      },
+      {
+        "id": 2,
+        "brand": "Honda",
+        "model": "Civic",
+        "valueInBaht": 600000,
+        "numberOfCars": 30,
+        "highlighted": false
+      },
+      {
+        "id": 3,
+        "brand": "Honda",
+        "model": "City",
+        "valueInBaht": 450000,
+        "numberOfCars": 50,
+        "highlighted": false
+      },
+      {
+        "id": 4,
+        "brand": "Toyota",
+        "model": "Camry",
+        "valueInBaht": 700000,
+        "numberOfCars": 40,
+        "highlighted": false
+      },
+      {
+        "id": 5,
+        "brand": "Toyota",
+        "model": "Corolla",
+        "valueInBaht": 650000,
+        "numberOfCars": 60,
+        "highlighted": false
+      },
+      {
+        "id": 6,
+        "brand": "Toyota",
+        "model": "Yaris",
+        "valueInBaht": 400000,
+        "numberOfCars": 100,
+        "highlighted": false
+      },
+      {
+        "id": 7,
+        "brand": "Ford",
+        "model": "Focus",
+        "valueInBaht": 550000,
+        "numberOfCars": 15,
+        "highlighted": false
+      },
+      {
+        "id": 8,
+        "brand": "Ford",
+        "model": "Mustang",
+        "valueInBaht": 1200000,
+        "numberOfCars": 10,
+        "highlighted": false
+      },
+      {
+        "id": 9,
+        "brand": "Ford",
+        "model": "Fiesta",
+        "valueInBaht": 400000,
+        "numberOfCars": 25,
+        "highlighted": false
+      },
+      {
+        "id": 10,
+        "brand": "Nissan",
+        "model": "Altima",
+        "valueInBaht": 580000,
+        "numberOfCars": 25,
+        "highlighted": false
+      },
+      {
+        "id": 11,
+        "brand": "Nissan",
+        "model": "Skyline",
+        "valueInBaht": 1100000,
+        "numberOfCars": 5,
+        "highlighted": false
+      },
+      {
+        "id": 12,
+        "brand": "Suzuki",
+        "model": "Swift",
+        "valueInBaht": 450000,
+        "numberOfCars": 70,
+        "highlighted": false
+      },
+      {
+        "id": 13,
+        "brand": "Suzuki",
+        "model": "Vitara",
+        "valueInBaht": 550000,
+        "numberOfCars": 30,
+        "highlighted": false
+      },
+      {
+        "id": 14,
+        "brand": "Kia",
+        "model": "Seltos",
+        "valueInBaht": 600000,
+        "numberOfCars": 40,
+        "highlighted": false
+      },
+      {
+        "id": 15,
+        "brand": "Kia",
+        "model": "Sorento",
+        "valueInBaht": 750000,
+        "numberOfCars": 20,
+        "highlighted": false
+      },
+      {
+        "id": 16,
+        "brand": "Audi",
+        "model": "A4",
+        "valueInBaht": 1200000,
+        "numberOfCars": 15,
+        "highlighted": false
+      },
+      {
+        "id": 17,
+        "brand": "Audi",
+        "model": "Q5",
+        "valueInBaht": 1600000,
+        "numberOfCars": 10,
+        "highlighted": false
+      },
+      {
+        "id": 18,
+        "brand": "BMW",
+        "model": "3 Series",
+        "valueInBaht": 1800000,
+        "numberOfCars": 20,
+        "highlighted": false
+      },
+      {
+        "id": 19,
+        "brand": "BMW",
+        "model": "X5",
+        "valueInBaht": 2500000,
+        "numberOfCars": 10,
+        "highlighted": false
+      },
+      {
+        "id": 20,
+        "brand": "Nissan",
+        "model": "AD Van",
+        "valueInBaht": 100000,
+        "numberOfCars": 7,
+        "highlighted": false
+      },
+      {
+        "id": 21,
+        "brand": "Suzuki",
+        "model": "2020",
+        "valueInBaht": 300000,
+        "numberOfCars": 40,
+        "highlighted": false
+      },
+      {
+        "id": 22,
+        "brand": "Kia",
+        "model": "2017",
+        "valueInBaht": 350000,
+        "numberOfCars": 31,
+        "highlighted": false
+      },
+      {
+        "id": 23,
+        "brand": "Audi",
+        "model": "Race Impact",
+        "valueInBaht": 1100000,
+        "numberOfCars": 57,
+        "highlighted": false
+      },
+      {
+        "id": 24,
+        "brand": "BMW",
+        "model": "LetXX",
+        "valueInBaht": 3000000,
+        "numberOfCars": 10,
+        "highlighted": false
+      }
+    ]
+  }
+  
